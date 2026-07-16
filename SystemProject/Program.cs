@@ -24,13 +24,6 @@ internal static class Program
     }
 
     private static IReadOnlyList<IHardwareCheck> DiscoverChecks() =>
-        Assembly.GetExecutingAssembly()
-            .GetTypes()
-            .Where(type =>
-                !type.IsAbstract &&
-                typeof(IHardwareCheck).IsAssignableFrom(type) &&
-                type.GetConstructor(Type.EmptyTypes) is not null)
-            .Select(type => (IHardwareCheck)Activator.CreateInstance(type)!)
-            .OrderBy(check => check.Name)
-            .ToArray();
+        Assembly.GetExecutingAssembly().GetTypes().Where(type => !type.IsAbstract && typeof(IHardwareCheck).IsAssignableFrom(type) 
+        && type.GetConstructor(Type.EmptyTypes) is not null).Select(type => (IHardwareCheck)Activator.CreateInstance(type)!).OrderBy(check => check.Name).ToArray();
 }
