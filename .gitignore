@@ -1,0 +1,33 @@
+# .NET build output
+[Bb]in/
+[Oo]bj/
+[Aa]rtifacts/
+[Ll]og/
+[Ll]ogs/
+[Pp]ublish/
+
+# IDE and per-user state
+.vs/
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Test and coverage output
+[Tt]est[Rr]esult*/
+[Cc]overage[Rr]eports*/
+*.coverage
+*.coveragexml
+
+# NuGet packages
+packages/
+*.nupkg
+*.snupkg
+
+# Operating-system clutter
+.DS_Store
+Thumbs.db
+Desktop.ini
